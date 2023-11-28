@@ -4,24 +4,22 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
+    [Header("AI Properties")]
     public NavMeshAgent agent;
     public Transform player;
     public LayerMask whatIsGround, whatIsPlayer;
     public float health;
-    //Patroling
+    [Header("Patroling Properties")]
     public Vector3 walkPoint;
     bool walkPointSet;
     public float walkPointRange;
-
-    //Attacking
+    [Header("Attacking Properties")]
     public float timeBetweenAttacks;
     bool alreadyAttacked;
     public GameObject projectile;
-
-    //States
+    [Header("States Properties")]
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
-
     private void Awake()
     {
         player = GameObject.Find("PlayerObj").transform;

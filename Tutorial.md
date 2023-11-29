@@ -145,6 +145,9 @@ In this script we need to create the variales to control the properties of the A
 
         if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
     }
+```
+
+```.cs
     private void DestroyEnemy()
     {
         Destroy(gameObject);

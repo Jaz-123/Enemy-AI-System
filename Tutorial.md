@@ -36,3 +36,13 @@ In this script we need to create the variales to control the properties of the A
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 ```
+
+### Awake Function
+
+```.cs
+    private void Awake()
+    {
+        player = GameObject.Find("Player").transform;
+        agent = GetComponent<NavMeshAgent>();
+    }
+```

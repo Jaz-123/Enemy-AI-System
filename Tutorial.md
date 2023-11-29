@@ -165,3 +165,5 @@ In this script we need to create the variales to control the properties of the A
         Gizmos.DrawWireSphere(transform.position, sightRange);
     }
 ```
+
+## 3. Finish setup in Unity

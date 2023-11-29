@@ -1251,7 +1251,7 @@ MonoBehaviour:
   timeBetweenAttacks: 1
   projectile: {fileID: 0}
   sightRange: 30
-  attackRange: 0
+  attackRange: 5
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!136 &1877899125

@@ -20,3 +20,19 @@ Under your scripts folder create a new script and call it `EnemyAI`
 
 ### Refrences
 
+In this script we need to create the variales to control the properties of the AI:
+
+```.cs
+    public NavMeshAgent agent;
+    public Transform player;
+    public LayerMask whatIsGround, whatIsPlayer;
+    public float health;
+    public Vector3 walkPoint;
+    bool walkPointSet;
+    public float walkPointRange;
+    public float timeBetweenAttacks;
+    bool alreadyAttacked;
+    public GameObject projectile;
+    public float sightRange, attackRange;
+    public bool playerInSightRange, playerInAttackRange;
+```

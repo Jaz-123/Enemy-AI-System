@@ -19,3 +19,4 @@ Now on the enemy object apply the `Nav Mesh Agent` component, the default values
 Under your scripts folder create a new script and call it `EnemyAI`
 
 ### Refrences
+

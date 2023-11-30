@@ -194,4 +194,4 @@ This is optional but all we are doing is visualising the ranges in which the ene
 
 Now just apply the script and change the values to your liking and make sure to put a gameobject in for a projectile.
 
-Now hit play and amke sure you have no errors.
+Now hit play and make sure you have no errors.

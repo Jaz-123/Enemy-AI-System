@@ -37,6 +37,8 @@ In this script we need to create the variales to control the properties of the A
     public bool playerInSightRange, playerInAttackRange;
 ```
 
+
+
 ### Awake Function
 
 ```.cs

@@ -139,6 +139,12 @@ Here we jsut set the destination of the AI to the position of the player.
     }
 ```
 
+In this attack function, first we stop the enemy from moving then rotate the enemy to face the player.
+
+Next, as an exapmple, we get the enemy to shoot a projectile at the player, this can be replaces with any form of attacking of your choice.
+
+We then set `alreadyAttacked` to true and check if the `timeBetweenAttacks` has passed so we can then attack again after a given amount of time.
+
 ```.cs
     private void ResetAttack()
     {
@@ -146,11 +152,7 @@ Here we jsut set the destination of the AI to the position of the player.
     }
 ```
 
-In this attack function, first we stop the enemy from moving then rotate the enemy to face the player.
-
-Next, as an exapmple, we get the enemy to shoot a projectile at the player, this can be replaces with any form of attacking of your choice.
-
-We then set `alreadyAttacked` to true and check if the `timeBetweenAttacks` has passed so we can then attack again after a given amount of time.
+Here we reset the attack after we have just attacked.
 
 ### Damage
 
@@ -163,6 +165,8 @@ We then set `alreadyAttacked` to true and check if the `timeBetweenAttacks` has 
     }
 ```
 
+Here we reduce the `health` of the enemy.
+
 ```.cs
     private void DestroyEnemy()
     {
@@ -170,7 +174,7 @@ We then set `alreadyAttacked` to true and check if the `timeBetweenAttacks` has 
     }
 ```
 
-Here we reduce the `health` of the enemy and if its 0 we then destroy the enemy gameobject.
+If the `health` is 0 we destroy the gameobject.
 
 ### Gizmos (Optional)
 

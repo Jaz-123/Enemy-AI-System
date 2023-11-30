@@ -129,11 +129,9 @@ Here we jsut set the destination of the AI to the position of the player.
 
         if (!alreadyAttacked)
         {
-            ///Attack code here
             Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             rb.AddForce(transform.up * 8f, ForceMode.Impulse);
-            ///End of attack code
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
@@ -148,7 +146,11 @@ Here we jsut set the destination of the AI to the position of the player.
     }
 ```
 
+In this attack function, first we stop the enemy from moving then rotate the enemy to face the player.
 
+Next, as an exapmple, we get the enemy to shoot a projectile at the player, this can be replaces with any form of attacking of your choice.
+
+We then set `alreadyAttacked` to true and check if the `timeBetweenAttacks` has passed so we can then attack again after a given amount of time.
 
 ### Damage
 
@@ -168,6 +170,8 @@ Here we jsut set the destination of the AI to the position of the player.
     }
 ```
 
+Here we reduce the `health` of the enemy and if its 0 we then destroy the enemy gameobject.
+
 ### Gizmos (Optional)
 
 ```.cs
@@ -180,4 +184,10 @@ Here we jsut set the destination of the AI to the position of the player.
     }
 ```
 
+This is optional but all we are doing is visualising the ranges in which the enemy chases and attacks.
+
 ## 3. Finish setup in Unity
+
+Now just apply the script and change the values to your liking and make sure to put a gameobject in for a projectile.
+
+Now hit play and amke sure you have no errors.

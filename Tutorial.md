@@ -37,8 +37,6 @@ In this script we need to create the variales to control the properties of the A
     public bool playerInSightRange, playerInAttackRange;
 ```
 
-
-
 ### Awake Function
 
 ```.cs
@@ -48,6 +46,10 @@ In this script we need to create the variales to control the properties of the A
         agent = GetComponent<NavMeshAgent>();
     }
 ```
+
+In the awake function if the variable `player` isnt already assigned, we search the scene to find the player's transform.
+
+We then get the AI agent component that is on the enemy object.
 
 ### Update Function
 
@@ -63,6 +65,8 @@ In this script we need to create the variales to control the properties of the A
         if (playerInAttackRange && playerInSightRange) AttackPlayer();
     }
 ```
+
+In the update function we check if the player is within any given ranges for chasing or attacking, if so we then call the respective functions.
 
 ### Patroling Function
 
@@ -82,6 +86,8 @@ In this script we need to create the variales to control the properties of the A
     }
 ```
 
+In this patroling function we check if we already have a walk destiantion, if not we call the `SearchWalkPoint()` function, otherwise we check our distance to the walkpoint and if it is 0, we then say that we no longer have a walk destination.
+
 ### Walk Point Function
 
 ```.cs
@@ -98,6 +104,8 @@ In this script we need to create the variales to control the properties of the A
     }
 ```
 
+Here we just generate a random point using a specified range from the original start position, we then make sure that the point we have generated is on a ground by using a raycast as a ground check, if it is true then we set the points as the new walk destination.
+
 ### Chase Function
 
 ```.cs
@@ -106,6 +114,8 @@ In this script we need to create the variales to control the properties of the A
         agent.SetDestination(player.position);
     }
 ```
+
+Here we jsut set the destination of the AI to the position of the player.
 
 ### Attack Function
 
@@ -137,6 +147,8 @@ In this script we need to create the variales to control the properties of the A
         alreadyAttacked = false;
     }
 ```
+
+
 
 ### Damage
 
